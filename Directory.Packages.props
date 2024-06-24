@@ -1,0 +1,93 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <AspnetVersion>8.0.0</AspnetVersion>
+    <MicrosoftExtensionsVersion>8.0.0</MicrosoftExtensionsVersion>
+    <EfVersion>8.0.0</EfVersion>
+    <FastEndPointVersion>5.21.2</FastEndPointVersion>
+    <RuntimeVersion>8.0.0</RuntimeVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Version together with ASP.NET -->
+    <PackageVersion Include="Asp.Versioning.Http" Version="8.1.0" />
+    <PackageVersion Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(AspnetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="$(AspnetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(AspnetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(AspnetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.TestHost" Version="$(AspnetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="$(MicrosoftExtensionsVersion)" />
+    <!-- FastEndPoints -->
+    <PackageVersion Include="FastEndpoints" Version="$(FastEndPointVersion)" />
+    <PackageVersion Include="FastEndpoints.Swagger" Version="$(FastEndPointVersion)" />
+    <PackageVersion Include="FastEndpoints.Security" Version="$(FastEndPointVersion)" />
+    <PackageVersion Include="FastEndpoints.Testing" Version="$(FastEndPointVersion)" />
+    <!-- Version together with runtime -->
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="$(RuntimeVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(RuntimeVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="$(RuntimeVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="$(RuntimeVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="$(RuntimeVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(RuntimeVersion)" />
+    <!-- Version together with EF -->
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="$(EfVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <!-- Health Checks -->
+    <PackageVersion Include="AspNetCore.HealthChecks.Uris" Version="$(AspnetVersion)" />
+    <PackageVersion Include="AspNetCore.HealthChecks.SqlServer" Version="8.0.2" />
+    <PackageVersion Include="AspNetCore.HealthChecks.UI.Client" Version="8.0.1" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageVersion Include="Newtonsoft.Json.Schema" Version="3.0.15" />
+    <!-- Open Telemetry -->
+    <PackageVersion Include="OpenTelemetry.Exporter.Console" Version="1.8.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.8.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.7.0-rc.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.8.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.8.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.8.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.8.1" />
+    <!-- VS Test -->
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <!-- Miscellaneous -->
+    <PackageVersion Include="Elastic.Clients.Elasticsearch" Version="8.11.0" />
+    <PackageVersion Include="Bogus" Version="35.3.0" />
+    <PackageVersion Include="Serilog.AspNetCore" Version="8.0.1" />
+    <PackageVersion Include="Serilog.Exceptions" Version="8.4.0" />
+    <PackageVersion Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageVersion Include="Serilog.Sinks.Elasticsearch" Version="10.0.0" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+    <PackageVersion Include="Mapster" Version="7.4.0" />
+    <PackageVersion Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageVersion Include="FluentValidation" Version="11.9.1" />
+    <PackageVersion Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageVersion Include="MediatR" Version="12.2.0" />
+    <PackageVersion Include="ErrorOr" Version="2.0.1" />
+    <PackageVersion Include="ardalis.smartenum" Version="8.0.0" />
+    <PackageVersion Include="Testcontainers.Elasticsearch" Version="3.6.0" />
+    <PackageVersion Include="Throw" Version="1.4.0" />
+    <PackageVersion Include="Refit" Version="7.0.0" />
+    <PackageVersion Include="Refit.HttpClientFactory " Version="7.0.0" />
+    <PackageVersion Include="Moq" Version="4.20.70" />
+    <PackageVersion Include="FluentAssertions" Version="6.12.0" />
+    <PackageVersion Include="Ductus.FluentDocker" Version="2.10.59" />
+    <PackageVersion Include="Testcontainers" Version="3.6.0" />
+    <PackageVersion Include="Testcontainers.MsSql" Version="3.6.0" />
+    <PackageVersion Include="WireMock.Net" Version="1.5.47" />
+    <PackageVersion Include="xunit" Version="2.8.0" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.0" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.2" />
+    <PackageVersion Include="SpecFlow.xUnit" Version="3.9.74" />
+    <PackageVersion Include="Meziantou.Xunit.ParallelTestFramework" Version="2.1.0" />
+    <PackageVersion Include="Respawn" Version="6.1.0" />
+    <!-- Analysers -->
+    <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.435" />
+    <PackageVersion Include="Roslynator.CodeAnalysis.Analyzers" Version="4.12.3" />
+    <PackageVersion Include="Roslynator.Formatting.Analyzers" Version="4.12.3" />
+    <PackageVersion Include="Roslynator.Analyzers" Version="4.12.3" />
+  </ItemGroup>
+</Project>

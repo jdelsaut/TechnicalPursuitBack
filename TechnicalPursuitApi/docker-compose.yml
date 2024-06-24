@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+
+  webapi:
+    build:
+      context: ../
+      dockerfile: ./TechnicalPursuitApi/Dockerfile
+    ports:
+      - "6969:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=TechnicalPursuitApi;User=sa;Password=luc1234!;TrustServerCertificate=true
+      - Otlp__Endpoint=http://otel-collector:4317
+    depends_on:
+      - db
+      #- rabbitmq
+    container_name: TechnicalPursuitApi-api
+
+  db:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    ports:
+      - "42069:1433"
+    environment:
+      SA_PASSWORD: luc1234!
+      ACCEPT_EULA: "Y"
+# rabbitmq: # login guest:guest
+#   image: rabbitmq:management
+#   hostname: "rabbitmq"
+#   labels:
+#     NAME: "rabbitmq"
+#   ports:
+#   - "4369:4369"
+#   - "5671:5671"
+#   - "5672:5672"
+#   - "25672:25672"
+#   - "15671:15671"
+#   - "15672:15672"
